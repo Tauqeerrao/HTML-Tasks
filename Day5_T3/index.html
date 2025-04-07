@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSP - Sign In</title>
+</head>
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom,
+                #e8ecef 0%,
+                #f1eaea 50%,
+                #f9e6e6 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .header-section {
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        max-width: 900px;
+        width: 100%;
+        background: transparent;
+        border-radius: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        margin: 20px;
+    }
+
+    .image-section {
+        flex: 5;
+        /* background-image: url('Introduction.png'); Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 600px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        color: #ffffff;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+
+    .image-section h2 {
+        font-size: 32px;
+        margin: 0 0 10px 0;
+        font-weight: 600;
+    }
+
+    .image-section p {
+        font-size: 16px;
+        margin: 0;
+        opacity: 0.9;
+    }
+
+    form {
+        flex: 5;
+        display: flex;
+        justify-content: center;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 16px;
+        width: 360px;
+        height: 388px;
+    }
+
+    .form-wrapper>* {
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #000000;
+        margin: 0;
+        padding: 8px 12px;
+        border-radius: 8px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+        color: #666666;
+        margin: 0;
+        text-align: center;
+    }
+
+    .form-group {
+        width: 100%;
+        position: relative;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+        color: #333333;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .form-group input {
+        width: 100%;
+        height: 40px;
+        padding: 10px 16px;
+        padding-right: 40px;
+        border: 1px dashed #cccccc;
+        border-radius: 18px;
+        font-size: 14px;
+        background-color: #ffffff;
+        box-sizing: border-box;
+    }
+
+    .form-group input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    .password-container .eye-icon {
+        position: absolute;
+        right: 12px;
+        top: 70%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 19px;
+    }
+
+    .remember-me {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* Ensures "Login with Code" stays on the right */
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 41px;
+        letter-spacing: -1%;
+        width: 100%;
+        /* Ensures it spans the full width */
+    }
+
+    .remember-me .custom-checkbox {
+        position: relative;
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+        /* Reduced margin to bring checkbox closer to label */
+    }
+
+    .remember-me .custom-checkbox input {
+        display: none;
+    }
+
+    .remember-me .custom-checkbox .checkbox-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: 28px;
+        pointer-events: none;
+    }
+
+    .remember-me .custom-checkbox input:checked~.checkbox-icon {
+        fill: #000000;
+        fill-opacity: 1;
+    }
+
+    .remember-me label {
+        margin-right: auto;
+        /* Keeps label close to checkbox and pushes "Login with Code" to the right */
+    }
+
+    .login-with-code {
+        color: #12091a;
+        text-decoration: underline;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .login-with-code:hover {
+        text-decoration: dotted;
+    }
+
+    .login-with-code {
+        color: #12091a;
+        text-decoration: underline;
+        margin: 0;
+        width: 119px;
+        height: 20px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .login-with-code:hover {
+        text-decoration: dotted;
+    }
+
+    button {
+        width: 100%;
+        height: 40px;
+        padding: 0;
+        background-color: #000000;
+        border: none;
+        border-radius: 18px;
+        font-size: 16px;
+        color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button:hover {
+        background-color: #333333;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .container {
+            max-width: 700px;
+        }
+
+        .header-section {
+            padding: 15px 0;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-bottom: 120px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        form {
+            padding: 30px;
+        }
+
+        .form-wrapper {
+            width: 300px;
+            height: 350px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        .form-group input {
+            height: 36px;
+            font-size: 12px;
+        }
+
+        button {
+            height: 36px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            max-width: 90%;
+            margin: 10px;
+        }
+
+        .header-section {
+            padding: 10px 0;
+            width: 90%;
+        }
+
+        .title {
+            font-size: 16px;
+            margin-bottom: 100px;
+        }
+
+        .logo {
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .logo img {
+            width: 80px;
+        }
+
+        .image-section {
+            flex: none;
+            width: 100%;
+            min-height: 300px;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .image-section h2 {
+            font-size: 24px;
+        }
+
+        .image-section p {
+            font-size: 12px;
+        }
+
+        form {
+            flex: none;
+            width: 100%;
+            padding: 20px;
+            border-radius: 0 0 16px 16px;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            gap: 12px;
+        }
+
+        h2 {
+            font-size: 18px;
+            padding: 6px 10px;
+        }
+
+        p {
+            font-size: 11px;
+        }
+
+        .form-group input {
+            height: 34px;
+            font-size: 11px;
+        }
+
+        .password-container .eye-icon {
+            right: 10px;
+            width: 18px;
+            height: 17px;
+        }
+
+        .login-with-code {
+            font-size: 15px;
+            width: 120px;
+            height: 18px;
+            line-height: 18px;
+        }
+
+        button {
+            height: 34px;
+            font-size: 13px;
+        }
+
+        .remember-me .custom-checkbox {
+            width: 24px;
+            height: 24px;
+        }
+
+        .remember-me .custom-checkbox .checkbox-icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            margin: 5px;
+        }
+
+        .header-section {
+            padding: 5px 0;
+            width: 90%;
+        }
+
+        .title {
+            font-size: 14px;
+            margin-bottom: 80px;
+        }
+
+        .logo {
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            width: 60px;
+        }
+
+        form {
+            padding: 15px;
+        }
+
+        .form-wrapper {
+            gap: 10px;
+        }
+
+        h2 {
+            font-size: 16px;
+            padding: 5px 8px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        .form-group label {
+            font-size: 12px;
+        }
+
+        .form-group input {
+            height: 32px;
+            font-size: 10px;
+            padding: 8px 12px;
+            padding-right: 30px;
+        }
+
+        .password-container .eye-icon {
+            right: 8px;
+            width: 16px;
+            height: 15px;
+        }
+
+        .remember-me {
+            gap: 8px;
+        }
+
+        .login-with-code {
+            font-size: 12px;
+            width: 90px;
+            height: 16px;
+            line-height: 16px;
+        }
+
+        button {
+            height: 32px;
+            font-size: 12px;
+        }
+
+        .remember-me .custom-checkbox {
+            width: 20px;
+            height: 20px;
+        }
+
+        .remember-me .custom-checkbox .checkbox-icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+</style>
+
+<body>
+    <div class="header-section">
+        <div class="logo">
+            <img src="oderificimg.png" alt="Orderific Logo" loading="lazy">
+        </div>
+        <div class="title">Service Panel</div>
+    </div>
+    <div class="container">
+        <form>
+            <div class="form-wrapper">
+                <h2>Welcome Back</h2>
+                <p>Manage, streamline, and thrive effortlessly.</p>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter email address" value="samsmith@gmail.com">
+                </div>
+                <div class="form-group password-container">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password" value="••••••••">
+                    <svg class="eye-icon" width="20" height="19" viewBox="0 0 22 19" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.7616 18.87L14.7156 14.8545C14.2027 15.0444 13.6344 15.1995 13.0106 15.32C12.3869 15.4405 11.7167 15.5008 11.0001 15.5008C8.65007 15.5008 6.53666 14.8546 4.65982 13.5623C2.78282 12.27 1.40907 10.5828 0.538574 8.5008C0.907741 7.61746 1.38466 6.79346 1.96932 6.0288C2.55399 5.26396 3.19757 4.6008 3.90007 4.0393L1.13082 1.2393L2.18482 0.185547L19.8153 17.816L18.7616 18.87ZM11.0001 12.5778C11.2091 12.5778 11.4232 12.5598 11.6423 12.5238C11.8617 12.488 12.0566 12.4354 12.2271 12.366L7.13482 7.2738C7.06549 7.45713 7.01291 7.6568 6.97707 7.8728C6.94107 8.08896 6.92307 8.2983 6.92307 8.5008C6.92307 9.63546 7.31891 10.5986 8.11058 11.3903C8.90224 12.182 9.86541 12.5778 11.0001 12.5778ZM17.9538 13.0853L14.8173 9.9738C14.8955 9.76096 14.9583 9.5328 15.0058 9.2893C15.0533 9.04563 15.0771 8.7828 15.0771 8.5008C15.0771 7.36613 14.6812 6.40296 13.8896 5.6113C13.0979 4.81963 12.1347 4.4238 11.0001 4.4238C10.7181 4.4238 10.4585 4.44913 10.2213 4.4998C9.98416 4.55046 9.75591 4.62646 9.53657 4.7278L7.03482 2.23555C7.66682 1.98421 8.31233 1.79896 8.97132 1.6798C9.63033 1.56046 10.3066 1.5008 11.0001 1.5008C13.3436 1.5008 15.457 2.14696 17.3403 3.4393C19.2237 4.73163 20.5974 6.4188 21.4616 8.5008C21.0911 9.3943 20.6126 10.2283 20.0261 11.0028C19.4394 11.7771 18.7487 12.4713 17.9538 13.0853ZM13.6846 8.8508L10.6751 5.8508C11.1161 5.76746 11.5324 5.80013 11.9241 5.9488C12.3157 6.09763 12.6532 6.3188 12.9366 6.6123C13.2264 6.90596 13.4386 7.25021 13.5731 7.64505C13.7077 8.03988 13.7449 8.4418 13.6846 8.8508Z"
+                            fill="black" fill-opacity="0.4" />
+                    </svg>
+                </div>
+                <div class="remember-me">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" id="remember" name="remember">
+                        <svg class="checkbox-icon" width="28" height="28" viewBox="0 0 28 28" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="28" height="28" rx="8" fill="black" fill-opacity="0.1" />
+                        </svg>
+                    </div>
+                    <label for="remember">Remember me</label>
+                    <a href="#" class="login-with-code">Login with Code</a>
+                </div>
+                <button type="submit">Sign In</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

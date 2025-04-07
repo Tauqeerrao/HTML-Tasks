@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensure font-family matches */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-100 font-sans">
+
+    <!-- Hidden Checkbox for Toggle -->
+    <input type="checkbox" id="popup-toggle" class="peer hidden">
+
+    <!-- CLICK HERE Button -->
+    <label for="popup-toggle"
+        class="bg-black text-white px-6 py-3 rounded-lg font-semibold shadow-md cursor-pointer hover:bg-red-700 text-lg">
+        Cancel Items
+    </label>
+
+    <!-- Popup Modal -->
+    <div class="fixed inset-0 flex justify-center items-center hidden peer-checked:flex">
+        <div class="bg-white p-6 rounded-2xl shadow-2xl w-80 relative">
+
+            <!-- Close Button with White Circular Background -->
+            <label for="popup-toggle"
+                class="absolute top-3 right-3 bg-white w-8 h-8 flex items-center justify-center rounded-full shadow-md cursor-pointer">
+                <span class="text-black text-lg font-bold">&times;</span>
+            </label>
+
+            <h2 class="text-xl font-bold text-black">Cancel Item</h2>
+            <p class="text-gray-600 mt-1 text-sm">Are you sure to cancel this item?</p>
+
+            <!-- Order Box -->
+            <div class="border border-gray-300 rounded-lg p-3 mt-4 bg-gray-50">
+                <p class="font-semibold text-base text-black">Tasty Burger</p>
+                <p class="text-gray-500 text-xs">Size: Small, Cheese: A little bit, Salt: No</p>
+            </div>
+
+            <!-- Cancel Button (Fixed Border Radius) -->
+            <label for="popup-toggle"
+                class="w-full block bg-red-600 text-white font-semibold py-3 rounded-full mt-4 shadow-md text-center cursor-pointer hover:bg-red-700 text-lg">
+                Cancel Items
+            </label>
+        </div>
+    </div>
+
+</body>
+</html>

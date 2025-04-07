@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figma Matched UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .gcontainer {
+      width: 500px;
+      height: 822px;
+      background: linear-gradient(to bottom, #FEF4F2, #FFEAE6);
+      margin: 100px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gcard {
+      position: relative;
+      width: 480px;
+      height: 802px;
+      border-radius: 32px;
+      background-image: url("iimg.jpeg");
+      background-size: cover;
+      background-position: center;
+      padding: 40px 0 56px 40px; /* Figma-specific padding: top right bottom left */
+    }
+
+    .goverlay {
+      position: absolute;
+      background: linear-gradient(to bottom, #FF5634 70%, #000000 100%);
+      border-radius: 32px;
+      inset: 0;
+      opacity: 0.5;
+    }
+
+    .glogo {
+      width: 164.05px;
+      height: 38.97px;
+      position: relative;
+    }
+
+    .gtext-container {
+      position: absolute;
+      bottom: 56px;
+      color: white;
+      width: 400px;
+      height: 160px;
+    }
+
+    .gtitle {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 56px;
+      margin-bottom: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    .gdescription {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="gcontainer">
+    <div class="gcard">
+      <!-- Overlay -->
+      <div class="goverlay"></div>
+
+      <!-- Logo -->
+      <img src="logo1).png" alt="Logo" class="glogo">
+
+      <!-- Text Content -->
+      <div class="gtext-container">
+        <p class="gtitle">Service Panel</p>
+        <p class="gdescription">
+          Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
