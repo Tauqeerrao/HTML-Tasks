@@ -1,0 +1,239 @@
+/* ========== Global Reset & Basic ========== */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'DM Sans', sans-serif;
+    background: #f9f9f9;
+  }
+  
+  /* Button to open modal */
+  .open-btn {
+    background: #FF5733;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .open-btn:hover {
+    background: #e14f2f;
+  }
+  
+  /* ========== Overlay ========== */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  
+  /* ========== Modal ========== */
+  .modal {
+    /* Figma snippet */
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  
+    position: absolute;
+    width: 320px;
+    height: 268px;
+    left: calc(50% - 320px/2 + 10px);
+    top: calc(50% - 268px/2);
+  
+    background: #FFFFFF;
+    box-shadow: 0px 24px 72px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+  
+    z-index: 20; /* above overlay */
+  }
+  
+  /* ========== Modal Header ========== */
+  .modal-header {
+    /* Auto layout from snippet */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    gap: 257px;
+  
+    width: 320px;
+    height: 80px;
+  }
+  .modal-title {
+
+    width: 240px;
+    height: 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #000000;
+    white-space: nowrap;  /* Add this line */
+    text-align: left;
+  }
+  
+  
+  /* Iconic Buttons/Large (Close Icon) */
+  .close-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 84px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 40px;
+    color:#000000;
+  }
+  .close-icon-vector {
+    width: 24px;
+    height: 24px;
+    background: #000000;
+  }
+  .close-icon:hover {
+    opacity: 0.8;
+  }
+  
+  /* Vector - if needed
+     position: absolute;
+     left: 20.83%; right: 20.83%; top: 20.83%; bottom: 20.83%;
+     background: #000000;
+  */
+  
+  /* ========== Content Frame (Frame 1000005614) ========== */
+  .content-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 16px;
+    gap: 16px;
+  
+    width: 320px;
+    height: 108px;
+  }
+  .cancel-text {
+    width: 288px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #000000;
+    margin: 0;
+  }
+  
+  /* ========== Food Box (Component 6) ========== */
+  .food-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 12px;
+  
+    width: 288px;
+    height: 68px;
+  
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+  }
+  .food-box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 4px;
+    width: 264px;
+    height: 44px;
+  }
+  
+  /* Food Name */
+  .food-name {
+    width: 264px;
+    height: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #000000;
+    margin: 0;
+  }
+  /* Subtitle */
+  .food-subtitle {
+    width: 264px;
+    height: 16px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+  }
+  
+  /* Stepper (hidden) */
+  .stepper {
+    display: none;
+    width: 136px;
+    height: 48px;
+  }
+  
+  /* ========== Button Frame (Frame 1000005615) ========== */
+  .button-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+  
+    width: 320px;
+    height: 80px;
+  }
+  
+  /* Medium Button (Red) */
+  .red-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 32px;
+    gap: 8px;
+  
+    width: 288px;
+    height: 48px;
+    background: #E10E0E;
+    border-radius: 32px;
+  
+    cursor: pointer;
+  }
+  .red-button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Text Button */
+  .button-text {
+    width: 100px;
+    height: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    text-align: center;
+    white-space: nowrap;  /* Add this line */
+  }
+  
+  

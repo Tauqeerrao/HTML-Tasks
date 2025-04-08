@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables for Theme Colors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Open+Sans:wght@300;600&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #28a745;
+            --danger-color: #dc3545;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: var(--light-color);
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+        .box {
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .primary {
+            background-color: var(--primary-color);
+        }
+        .secondary {
+            background-color: var(--secondary-color);
+        }
+        .danger {
+            background-color: var(--danger-color);
+        }
+        .dark {
+            background-color: var(--dark-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>CSS Variables for Theme Colors</h2>
+        <div class="box primary">This section uses the primary theme color.</div>
+        <div class="box secondary">This section uses the secondary theme color.</div>
+        <div class="box danger">This section uses the danger theme color.</div>
+        <div class="box dark">This section uses the dark theme color.</div>
+    </div>
+</body>
+</html>

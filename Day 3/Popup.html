@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Cancel Modal</title>
+  <!-- If using DM Sans -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <button class="open-btn" onclick="openModal()">Click Here</button>
+
+  <!-- Optional Overlay -->
+  <div class="overlay" id="overlay" onclick="closeModal()"></div>
+
+  <!-- Modal Container -->
+  <div class="modal" id="modal">
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h2 class="modal-title">Cancel Item</h2>
+      <!-- Iconic Buttons/Large (Close Icon) -->
+      <div class="close-icon" onclick="closeModal()">
+        ×
+      </div>
+    </div>
+
+    <!-- Frame 1000005614 (content container) -->
+    <div class="content-frame">
+      <p class="cancel-text">Are you sure to cancel this item?</p>
+      
+      <!-- Component 6 (food box) -->
+      <div class="food-box">
+        <div class="food-box-content">
+          <h3 class="food-name">Tasty Burger</h3>
+          <p class="food-subtitle">Size: Small, Cheese: A little bit, Salt: No</p>
+        </div>
+        <!-- Stepper (hidden) -->
+        <div class="stepper"></div>
+      </div>
+    </div>
+
+    <!-- Frame 1000005615 (button container) -->
+    <div class="button-frame">
+      <!-- Medium Button -->
+      <div class="red-button">
+        <span class="button-text">Cancel Items</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('modal').style.display = 'flex';
+      document.getElementById('overlay').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

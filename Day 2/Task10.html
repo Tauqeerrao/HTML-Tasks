@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form Borders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .solid {
+            border: 2px solid #007bff;
+        }
+        .dashed {
+            border: 2px dashed #28a745;
+        }
+        .dotted {
+            border: 2px dotted #dc3545;
+        }
+        .double {
+            border: 4px double #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <h2>Task 10: Style Form Elements Using Different Border Styles</h2>
+    <form>
+        <input type="text" class="solid" placeholder="Solid Border">
+        <input type="text" class="dashed" placeholder="Dashed Border">
+        <input type="text" class="dotted" placeholder="Dotted Border">
+        <input type="text" class="double" placeholder="Double Border">
+    </form>
+</body>
+</html>

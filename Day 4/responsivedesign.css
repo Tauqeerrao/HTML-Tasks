@@ -1,0 +1,208 @@
+/* Base Font Size */
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);
+  padding: 1rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* McDonald's Info Card */
+.mcdonald-card {
+  display: flex;
+  width: 100%;
+  height: 92px;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.mcd-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -1%;
+}
+
+.mcd-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+}
+
+.time {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -3%;
+}
+
+/* Grid Wrapper */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 383px;
+  gap: 16px;
+  width: 100%;
+  flex-grow: 1;
+  margin-top: 16px;
+}
+
+/* General Section Styles */
+.section {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Preparing Section */
+.section-preparing {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  padding: 24px;
+  gap: 24px;
+  background: #FFFFFF;
+}
+
+/* Ready Section */
+.section-ready {
+  width: 383px;
+  height: 100%;
+  border-radius: 24px;
+  padding: 24px;
+  gap: 24px;
+  background: #FFFFFF;
+}
+
+.section h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -3%;
+}
+
+.box-item {
+  overflow-y: auto;
+  flex-grow: 2;
+}
+
+.items {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.item {
+  display: flex;
+  width: 106px;
+  height: 64px;
+  align-items: center;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.10);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  justify-content: center;
+}
+
+.section-ready .item {
+  background: #119717;
+  color: white;
+}
+
+.section-ready .item:first-child {
+  justify-content: center;
+  width: 100%;
+  height: 128px;
+  font-size: 32px;
+  padding: 24px;
+}
+
+.section-preparing .item {
+  background: #0000001A;
+  color: black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .grid-wrapper {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+  }
+
+  .section {
+      height: auto;
+      min-height: 400px;
+  }
+
+  .section h2 {
+      font-size: 24px;
+  }
+
+  .item {
+      width: 80px;
+      height: 50px;
+      font-size: 18px;
+  }
+
+  .section-ready .item:first-child {
+      height: 100px;
+      font-size: 24px;
+  }
+
+  .section-ready {
+      width: 100%;
+      height: 100%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .grid-wrapper {
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+  }
+
+  .mcd-logo img {
+      width: 40px;
+      height: 40px;
+  }
+
+  .time {
+      font-size: 20px;
+  }
+
+  .section h2 {
+      font-size: 20px;
+  }
+
+  .item {
+      width: 60px;
+      height: 40px;
+      font-size: 16px;
+  }
+
+  .section-ready .item:first-child {
+      height: 80px;
+      font-size: 20px;
+  }
+}

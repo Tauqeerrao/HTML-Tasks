@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page Background</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('greenery.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            color: black;
+        }
+        .example1 {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .example2 {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        .example3 {
+            background: radial-gradient(circle, #1e3c72, #2a5298);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Background Images and Colors Example</h2>
+        <div class="example1">This section has a solid light gray background.</div>
+        <br>
+        <div class="example2">This section has a beautiful gradient background.</div>
+        <br>
+        <div class="example3">This section has a radial gradient background.</div>
+    </div>
+</body>
+</html>

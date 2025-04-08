@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/* 1) Basic reset & body styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F3F4F6; /* Light gray background from the screenshot */
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px; /* Adds some breathing room */
+}
+
+/* 2) Heading: "Popular Items" */
+.popular-items {
+  /* From your specs: width & height for exact pixel matching */
+  width: 127px;
+  height: 24px;
+
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px; 
+  letter-spacing: -0.01em;
+  color: #000000;
+
+  /* Keep default margin for top spacing, or override if needed */
+  margin-bottom: 24px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* 3) Container for the 6 items - using CSS Grid for a 2-column layout */
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 16px; /* space between cards */
+}
+
+/* 4) Each Item Box (Frame 1000005651) */
+.item-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+
+  /* From your specs */
+  width: 157.5px;
+  height: 116px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+/* 5) Title inside each box ("Double Chicken Burger + French fries", etc.) */
+.title {
+  /* From your specs */
+  margin: 0 auto; /* Center horizontally within the box */
+  width: 125.5px;
+  height: 48px;
+
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px; /* 123% approx. */
+  color: #000000;
+
+  /* Ensure long text wraps if needed */
+  word-wrap: break-word;
+  text-align: left;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* 6) Row holding "Order:" and the numeric value */
+.order-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* Adjust gap if you want more or less space between "Order:" and the number */
+  gap: 4px;
+}
+
+/* 7) "Order" text label */
+.order {
+  /* From your specs */
+  width: 38px;
+  height: 16px;
+
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.6);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* 8) "Num" - the bold number after "Order:" */
+.num {
+  /* From your specs */
+  width: 84.5px;
+  height: 16px;
+
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}

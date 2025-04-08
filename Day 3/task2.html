@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            width: 200px;
+            background: #fff;
+            border: 2px solid #333;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .padding-small {
+            padding: 10px;
+        }
+        .padding-medium {
+            padding: 20px;
+        }
+        .padding-large {
+            padding: 40px;
+        }
+        .padding-mixed {
+            padding: 10px 20px 30px 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Padding Examples</h2>
+    <div class="container">
+        <div class="box padding-small">Small Padding (10px)</div>
+        <div class="box padding-medium">Medium Padding (20px)</div>
+        <div class="box padding-large">Large Padding (40px)</div>
+        <div class="box padding-mixed">Mixed Padding (10px 20px 30px 40px)</div>
+    </div>
+</body>
+</html>

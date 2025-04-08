@@ -1,0 +1,211 @@
+/* ------------------------------
+   1. GLOBAL RESETS & BASE
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Metropolis', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  /* Center the entire block on the page */
+  .page-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 40px;
+  }
+  
+  /* ------------------------------
+     2. PRICING WRAPPER
+  ------------------------------ */
+  .pricing-wrapper {
+    position: relative;
+    width: 370px; /* Adjust for perfect match */
+  }
+  
+  /* Circular Badge (light color + orange text) */
+  .badge-circle {
+    position: absolute;
+    top: -20px;
+    left: -60px;
+    width: 100px;
+    height: 100px;
+    background: #FFF0EC; /* Lighter shade */
+    color: #FF5733;      /* Orange text */
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+  }
+  
+  /* ------------------------------
+     3. PRICING CARD
+  ------------------------------ */
+  .pricing-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  /* Plan Header */
+  .plan-header {
+    position: relative;     /* Enables absolute positioning inside */
+    text-align: center;     /* Example alignment */
+    max-width: 400px;       /* Example container width; adjust to fit your design */
+    margin: 0 auto;         /* Center the whole header if desired */
+  }
+  
+  /* Keep the Plan Name at the same position (top-center) */
+  .plan-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 900;
+    color: #656565;
+  }
+  
+  /* Position the dollar icon between the Plan Name and the subtitle */
+  .dollar-icon {
+    position: absolute;
+    top: 5px;              /* Move icon down from the top of the container */
+    left: 10%;              /* Center horizontally */
+   /* Shift icon back to exact center */
+    width: 40px;            /* Adjust as needed */
+    
+  }
+  
+  /* Space out the subtitle so the icon doesn't overlap it */
+  
+  
+  
+  .plan-header h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .plan-header h2 {
+    font-size: 28px;
+    color: #222;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-top: 12px;
+    line-height: 1.4;
+      
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    display: block;
+    margin: 38px auto 26px auto;
+    background: #FF5733;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    padding: 16px 40px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  .cta-button:hover {
+    background: #e14f2f;
+  }
+  
+  /* ------------------------------
+     4. FEATURES SECTION
+  ------------------------------ */
+  .features {
+    margin-bottom: 20px;
+  }
+  
+  .features h4 {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 10px;
+    font-weight: 900;
+  }
+  
+  .features ul {
+    list-style: none;
+  }
+  
+  .features ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  /* Checkmark styling */
+  .checkmark {
+    color: #FF5733;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 3px;
+  }
+  
+  /* Bold title and desc */
+  li strong {
+    color: #000;
+    font-weight: 700;
+  }
+  
+  .desc {
+    color: #666;
+    font-size: 14px;
+    
+  }
+  
+  /* Wrap feature text in a div to align below the bold title */
+  li div {
+    display: inline-block;
+  }
+  
+  .more {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+  }
+  
+  /* ------------------------------
+     5. VISIONARY SECTION
+  ------------------------------ */
+  .visionary {
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .visionary h4 {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 6px;
+  }
+  
+  .visionary p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+  }
+  

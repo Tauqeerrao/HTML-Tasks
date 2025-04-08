@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Styles Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .box1 { border: 5px solid red; }
+        .box2 { border: 8px dashed blue; }
+        .box3 { border: 10px dotted green; }
+        .box4 { border: 6px double purple; }
+    </style>
+</head>
+<body>
+    <h2>Different Border Widths and Colors</h2>
+    <div class="container">
+        <div class="box box1">Solid Red</div>
+        <div class="box box2">Dashed Blue</div>
+        <div class="box box3">Dotted Green</div>
+        <div class="box box4">Double Purple</div>
+    </div>
+</body>
+</html>

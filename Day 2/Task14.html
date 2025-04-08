@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Notification Badge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+        .notification-container {
+            position: relative;
+            display: inline-block;
+        }
+        .bell-icon {
+            width: 50px;
+            height: 50px;
+            background: url('https://cdn-icons-png.flaticon.com/512/1827/1827314.png') no-repeat center;
+            background-size: cover;
+        }
+        .badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: red;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notification-container">
+        <div class="bell-icon"></div>
+        <span class="badge">5</span>
+    </div>
+
+</body>
+</html>

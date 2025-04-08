@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing: Border-Box</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .box {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+            background-color: lightblue;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Example 1: Default Box Model (Without Border-Box) */
+        .box1 {
+            box-sizing: content-box;
+        }
+
+        /* Example 2: Border-Box Applied */
+        .box2 {
+            box-sizing: border-box;
+        }
+
+        /* Example 3: Border-Box with Extra Padding */
+        .box3 {
+            box-sizing: border-box;
+            padding: 30px;
+            border: 8px solid darkblue;
+            background-color: lightgreen;
+        }
+
+        /* Example 4: Border-Box with Different Borders */
+        .box4 {
+            box-sizing: border-box;
+            border: 10px dashed red;
+            background-color: lightcoral;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Task 4: Using box-sizing: border-box;</h2>
+
+    <div class="container">
+        <div class="box box1">Default (content-box)</div>
+        <div class="box box2">Border-Box Applied</div>
+        <div class="box box3">Extra Padding</div>
+        <div class="box box4">Dashed Border</div>
+    </div>
+
+</body>
+</html>

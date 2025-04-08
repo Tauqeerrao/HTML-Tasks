@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Tasks - Navigation Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 20px;
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 960px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .nav-container h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-list li {
+            background: #fff;
+            border: 2px solid #ddd;
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .task-list li:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        .task-list li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .task-list li a:hover {
+            color: #007BFF;
+        }
+
+        .task-list li .task-title {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-container">
+        <h1>Day 4 Responsive Layout Tasks</h1>
+        
+        <ul class="task-list">
+            <li>
+                <a href="ResponsiveDesign.html">
+                    <span class="task-title">Task 1:</span> Responsive Design
+                </a>
+            </li>
+            <li>
+                <a href="PositionSidebar.html">
+                    <span class="task-title">Task 2:</span> Position Sidebar and Sticky Header
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

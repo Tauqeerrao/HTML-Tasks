@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Box Shadow</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .btn {
+            padding: 12px 24px;
+            font-size: 18px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-primary {
+            background: #007bff;
+            box-shadow: 4px 4px 10px rgba(0, 123, 255, 0.5);
+        }
+        .btn-primary:hover {
+            box-shadow: 6px 6px 15px rgba(0, 123, 255, 0.7);
+            transform: translateY(-3px);
+        }
+        .btn-danger {
+            background: #dc3545;
+            box-shadow: 4px 4px 10px rgba(220, 53, 69, 0.5);
+        }
+        .btn-danger:hover {
+            box-shadow: 6px 6px 15px rgba(220, 53, 69, 0.7);
+            transform: translateY(-3px);
+        }
+        .btn-success {
+            background: #28a745;
+            box-shadow: 4px 4px 10px rgba(40, 167, 69, 0.5);
+        }
+        .btn-success:hover {
+            box-shadow: 6px 6px 15px rgba(40, 167, 69, 0.7);
+            transform: translateY(-3px);
+        }
+        .btn-dark {
+            background: #343a40;
+            box-shadow: 4px 4px 10px rgba(52, 58, 64, 0.5);
+        }
+        .btn-dark:hover {
+            box-shadow: 6px 6px 15px rgba(52, 58, 64, 0.7);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <h2>Task 8: Use the Box-Shadow Property to Add Depth to Buttons</h2>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-dark">Dark</button>
+</body>
+</html>
